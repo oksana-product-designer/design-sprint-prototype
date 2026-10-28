@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   DESIGN SYSTEM — CSS CUSTOM PROPERTIES
+   ============================================================ */
+:root {
+  --color-primary: #0975e2;
+  --color-primary-light: #3f99f3;
+  --gradient-primary: linear-gradient(98.61deg, #3f99f3 0%, #0975e2 100%);
+  --gradient-logo: linear-gradient(91.64deg, #3f99f3 0%, #0975e2 100%);
+
+  --color-bg: #f6f6f6;
+  --color-surface: #ffffff;
+
+  --color-text-primary: #2c2c2c;
+  --color-text-secondary: #64748b;
+  --color-text-heading: #0f172a;
+  --color-text-col-header: #4c5c72;
+
+  --color-border: #d9d9d9;
+  --color-border-row: #e2e2e2;
+  --color-border-badge: rgba(44, 44, 44, 0.1);
+
+  --color-row-new: rgba(63, 153, 243, 0.05);
+  --color-row-error: rgba(213, 24, 24, 0.08);
+
+  --color-stat-blue: #0975e2;
+  --color-stat-red: #da3535;
+  --color-stat-orange: #fb8524;
+  --color-stat-purple: #b024fb;
+
+  --height-header: 80px;
+  --height-row: 56px;
+  --space-page-x: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 1440px;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+/* Right-pane custom scrollbar */
+.scrollbar-brand::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-brand::-webkit-scrollbar-track {
+  background: #f6f6f6;
+}
+.scrollbar-brand::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(63,153,243,0.3) 0%, rgba(9,117,226,0.3) 100%);
+  border-radius: 9999px;
+}
+
+@keyframes previewFadeIn {
+  from { opacity: 0; transform: scale(0.96) translateY(4px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0);   }
+}
