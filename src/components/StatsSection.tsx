@@ -51,19 +51,19 @@ export default function StatsSection({ documents, activeFilters, onFilterToggle 
 
   return (
     <div className="flex gap-4">
-      {stats.map((stat) => (
+      {stats.map(({ key, ...stat }) => (
         <StatCard
-          key={stat.key}
+          key={key}
           {...stat}
-          isActive={activeFilters.has(stat.key)}
-          onClick={() => onFilterToggle(stat.key)}
+          isActive={activeFilters.has(key)}
+          onClick={() => onFilterToggle(key)}
         />
       ))}
     </div>
   );
 }
 
-interface StatCardProps extends StatCardData {
+interface StatCardProps extends Omit<StatCardData, 'key'> {
   isActive: boolean;
   onClick: () => void;
 }
